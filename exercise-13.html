@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+</head>
+<body>
+
+    <!---🔥🔥🔥🔥 start javascript 🔥🔥🔥🔥-->
+<!--   <script src="index.js"></script> --> 
+
+<script>
+
+    console.groupCollapsed('Exercise-13');
+        function generateMultiples(num, length) {
+        if (num <= 0 || length <= 0) {
+            return []; // Return an empty array for invalid inputs
+        }
+
+        const multiplesArray = [];
+        let currentMultiple = num;
+
+        while (multiplesArray.length < length) {
+            multiplesArray.push(currentMultiple);
+            currentMultiple += num;
+        }
+
+        return multiplesArray;
+    }
+
+    // Example usage:
+    const multiples = generateMultiples(3, 5); // Get 5 multiples of 3
+    console.log(multiples); // Output: [3, 6, 9, 12, 15]
+    console.groupEnd();
+
+</script>
+
+</body>
+</html>

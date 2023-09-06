@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+</head>
+<body>
+
+    <!---🔥🔥🔥🔥 start javascript 🔥🔥🔥🔥-->
+<!--   <script src="index.js"></script> --> 
+
+<script>
+
+    //String
+    console.groupCollapsed('1-String');
+    const sampleString = "Hello, World!";
+    console.log(sampleString);
+    console.groupEnd();
+
+
+
+    //Number Value
+    console.groupCollapsed('2-Number-Value');
+    const sampleNumber = 42;
+    console.log(sampleNumber);
+    console.groupEnd();
+
+
+
+    //Boolean
+    console.groupCollapsed('3-Boolean');
+    const isItRaining = true;
+    console.log(isItRaining);
+    console.groupEnd();
+
+
+
+    //Null Value
+    console.groupCollapsed('4-Null-Value');
+    let cost = null;
+    console.log(cost);
+    console.groupEnd();
+
+
+
+    //Undefined Value
+    console.groupCollapsed('5-Undefined-Value');
+    let age;
+    alert(age);
+    console.log(age);
+    console.groupEnd();
+
+
+
+    //Object Instance
+    console.groupCollapsed('6-Object-Instance');
+        class Person {
+            constructor(firstName, lastName, age) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+                }
+            }
+        const person1 = new Person("John", "Doe", 30);
+        console.log(person1);
+    console.groupEnd();
+
+
+
+
+    //Array Instance
+    console.groupCollapsed('7-Array-Instancer');
+    const fruits = ["apple", "banana", "orange", "grape"];
+    //The OG list of fruits
+    console.log(fruits);
+    console.log("Original Array:", fruits);
+
+    fruits.push("strawberry");
+
+    console.log("Modified Array:", fruits);
+    const removedFruit = fruits.shift();
+
+    console.log("Modified Array:", fruits);
+    const secondFruit = fruits[1];
+
+    console.log("Modified Array:", fruits);
+    fruits[2] = "kiwi";
+
+    console.log("Modified Array:", fruits);
+    console.log("Removed Fruit:", removedFruit);
+    console.log("Second Fruit:", secondFruit);
+    console.groupEnd();
+
+
+
+    //No default value declaration
+    console.groupCollapsed('8-No-default-value-declaration');
+
+        // Prompt the user for two numbers
+        const firstNumberInput = prompt('Enter the first number:');
+        const secondNumberInput = prompt('Enter the second number:');
+
+        // Convert user inputs to numbers
+        const firstNumber = parseFloat(firstNumberInput);
+        const secondNumber = parseFloat(secondNumberInput);
+
+        // Check if the inputs are valid numbers
+        if (isNaN(firstNumber) || isNaN(secondNumber)) {
+            console.log('Invalid input. Please enter valid numbers.');
+        } else {
+            // Perform arithmetic operations
+            const additionResult = firstNumber + secondNumber;
+            const subtractionResult = firstNumber - secondNumber;
+            const multiplicationResult = firstNumber * secondNumber;
+
+            // Check for division by zero
+            if (secondNumber === 0) {
+                console.log('Division by zero is not allowed.');
+            } else {
+                const divisionResult = firstNumber / secondNumber;
+                
+                // Display the results
+                console.log(`Addition: ${firstNumber} + ${secondNumber} = ${additionResult}`);
+                console.log(`Subtraction: ${firstNumber} - ${secondNumber} = ${subtractionResult}`);
+                console.log(`Multiplication: ${firstNumber} * ${secondNumber} = ${multiplicationResult}`);
+                console.log(`Division: ${firstNumber} / ${secondNumber} = ${divisionResult}`);
+            }
+        }
+    console.groupEnd();
+</script>
+
+</body>
+</html>

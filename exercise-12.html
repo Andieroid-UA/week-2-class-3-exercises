@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Menu</title>
+</head>
+<body>
+
+    <h1>Good Eats Menu</h1>
+    <ul id="foodList">
+    </ul>
+    <!---🔥🔥🔥🔥 start javascript 🔥🔥🔥🔥-->
+    <script>
+        const menuData = [
+            { name: "Pizza", price: 12.99 },
+            { name: "Burger", price: 6.49 },
+            { name: "Salad", price: 8.99 },
+            { name: "Pasta", price: 10.99 },
+            { name: "Sushi", price: 14.99 },
+        ];
+
+        function createFoodListItem(food) {
+            const listItem = document.createElement("li");
+            listItem.textContent = `${food.name}: $${food.price.toFixed(2)}`;
+            return listItem;
+        }
+
+        const foodList = document.getElementById("foodList");
+
+        for (const foodItem of menuData) {
+            const listItem = createFoodListItem(foodItem);
+            foodList.appendChild(listItem);
+        }
+    </script>
+
+
+</body>
+</html>

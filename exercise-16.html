@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+</head>
+<body>
+
+    <!---🔥🔥🔥🔥 start javascript 🔥🔥🔥🔥-->
+<!--   <script src="index.js"></script> --> 
+
+<script>
+    console.groupCollapsed('Exercise-16');
+
+            function isPrime(number) {
+        // Check for special cases
+        if (number <= 1) {
+            return false;
+        }
+
+        if (number <= 3) {
+            return true;
+        }
+
+        // Check if the number is divisible by 2 or 3
+        if (number % 2 === 0 || number % 3 === 0) {
+            return false;
+        }
+
+        // Check for prime factors up to the square root of the number
+        for (let i = 5; i * i <= number; i += 6) {
+            if (number % i === 0 || number % (i + 2) === 0) {
+            return false;
+            }
+        }
+
+        return true;
+        }
+
+        // Example usage
+        const num = 17; // Change this to the number you want to check
+        if (isPrime(num)) {
+        console.log(`${num} is a prime number.`);
+        } else {
+        console.log(`${num} is not a prime number.`);
+        }
+
+    console.groupEnd();
+</script>
+</body>
+</html>

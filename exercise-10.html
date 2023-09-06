@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+</head>
+<body>
+
+    <!---🔥🔥🔥🔥 start javascript 🔥🔥🔥🔥-->
+<!--   <script src="index.js"></script> --> 
+
+<script>
+
+    console.groupCollapsed('10');
+    // Prompt the user for the first and second numbers
+    const firstNumber = parseFloat(prompt('Enter the first number: '));
+    const secondNumber = parseFloat(prompt('Enter the second number: '));
+
+    // Check if both inputs are valid numbers
+    if (isNaN(firstNumber) || isNaN(secondNumber)) {
+        console.log('Invalid input. Please enter valid numbers.');
+    } else {
+
+
+        // Perform arithmetic operations
+        const additionResult = firstNumber + secondNumber;
+        const subtractionResult = firstNumber - secondNumber;
+        const multiplicationResult = firstNumber * secondNumber;
+        
+        // Check for division by zero
+        if (secondNumber === 0) {
+            console.log('Division by zero is not allowed.');
+        } else {
+        const divisionResult = firstNumber / secondNumber;
+
+        // Display the results
+        console.log(`Addition: ${firstNumber} + ${secondNumber} = ${additionResult}`);
+        console.log(`Subtraction: ${firstNumber} - ${secondNumber} = ${subtractionResult}`);
+        console.log(`Multiplication: ${firstNumber} * ${secondNumber} = ${multiplicationResult}`);
+        console.log(`Division: ${firstNumber} / ${secondNumber} = ${divisionResult}`);
+                }
+            }
+            
+    console.groupEnd();
+
+</script>
+
+</body>
+</html>

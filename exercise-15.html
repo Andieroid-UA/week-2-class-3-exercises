@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+</head>
+<body>
+
+    <!---🔥🔥🔥🔥 start javascript 🔥🔥🔥🔥-->
+<!--   <script src="index.js"></script> --> 
+
+<script>
+    console.groupCollapsed('Exercise-15');
+        // Prompt the user for input
+        const userInput = prompt("Enter a number:");
+
+        // Convert the input to a number
+        const number = parseFloat(userInput);
+
+        // Check if the input is a valid number
+        if (isNaN(number)) {
+        console.log("Invalid input. Please enter a valid number.");
+        } else {
+        // Display the multiplication table
+        console.log(`Multiplication table for ${number}:`);
+        for (let i = 1; i <= 10; i++) {
+            const result = number * i;
+            console.log(`${number} x ${i} = ${result}`);
+        }
+        }
+    console.groupEnd();
+</script>
+</body>
+</html>
